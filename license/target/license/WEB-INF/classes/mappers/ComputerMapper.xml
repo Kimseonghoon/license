@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 
+id : primary key
+$ mysql -u user1 -p DBName
+DROP TABLE mc_component;
+CREATE TABLE mc_component(
+      id MEDIUMINT NOT NULL AUTO_INCREMENT,
+      name VARCHAR(30) NOT NULL,
+      type VARCHAR(5) NOT NULL,
+      cfg TEXT NOT NULL,
+      PRIMARY KEY (id) 
+    );
+ -->
+
+<mapper namespace="com.partdb.license.mapper.ComputerMapper">
+ 
+    <resultMap id="computer" type="COMPUTER" >
+        <result property="comp_id" 			column="comp_id"/>
+        <result property="comp_name" 		column="comp_name"/>
+        <result property="comp_type" 		column="comp_type"/>
+        <result property="comp_user" 		column="comp_user"/>
+        <result property="comp_location" 	column="comp_location"/>
+        <result property="comp_os_lic" 		column="comp_os_lic"/>
+        <result property="comp_office_lic" 	column="comp_office_lic"/>
+        <result property="comp_description" column="comp_description"/>
+    </resultMap>
+ 
+    <select id="getComputers" resultType="COMPUTER">
+        SELECT
+        *
+        FROM
+        computer
+    </select>
+    
+ <!-- 
+    <select id="getComponent" parameterType="Integer" resultType="COMPONENT">
+        SELECT
+        *
+        FROM
+        mc_component
+        WHERE
+        id=#{id}
+    </select>
+ 
+    <insert id="saveComponent" parameterType="COMPONENT" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO
+        mc_component(name, type, cfg)
+        VALUES
+        (#{name}, #{type}, #{cfg})
+        <selectKey keyProperty="id" resultType="Integer" order="AFTER">
+            SELECT LAST_INSERT_ID();
+        </selectKey>
+    </insert>
+    
+    <update id="updateComponent" parameterType="COMPONENT"> 
+        UPDATE 
+        mc_component
+        SET
+        name=#{name},
+        type=#{type}, 
+        cfg=#{cfg}
+        WHERE
+        id=#{id} 
+    </update>
+ 
+    <delete id="deleteComponent" parameterType="Integer">
+        DELETE FROM
+        mc_component
+        WHERE
+        id=#{id}
+    </delete> -->
+ 
+</mapper>
