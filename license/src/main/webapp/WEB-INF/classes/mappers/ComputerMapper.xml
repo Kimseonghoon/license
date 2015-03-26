@@ -26,12 +26,21 @@ CREATE TABLE mc_component(
         <result property="comp_office_lic" 	column="comp_office_lic"/>
         <result property="comp_description" column="comp_description"/>
     </resultMap>
- 
+    
     <select id="getComputers" resultType="COMPUTER">
         SELECT
-        *
+        	*
         FROM
-        computer
+        	computer
+    </select>
+    
+    <select id="getComputersByGroup" resultType="COMPUTER">
+        SELECT
+        	*
+        FROM
+        	computer
+        WHERE
+        	comp_location=#{id}
     </select>
     
  <!-- 

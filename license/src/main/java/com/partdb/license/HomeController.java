@@ -19,7 +19,7 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String login(Locale locale, Model model) {
-		return "login";
+		return "login2";
 	}
 	
 	@RequestMapping(value = "/home", method = RequestMethod.GET)

@@ -16,4 +16,8 @@ public class ComputerService {
 	public List<Computer> getComputers() {
 		return ComputerMapper.getComputers();
 	}
+
+	public List<Computer> getComputersByGroup(String id) {
+		return ComputerMapper.getComputersByGroup(id);
+	}
 }

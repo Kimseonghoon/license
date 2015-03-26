@@ -13,7 +13,9 @@
 <div class="inset">
 	<div class="login-head">
 		<h1>Login Form</h1>
-		 <div class="alert-close"></div> 			
+		 <div style="font-size:22px;color:#AAA;" class="alert-close">
+		 	<i class="axi axi-ion-close-round"></i>
+		 </div> 			
 	</div>
 	<div class="form">
 		<div class="li">

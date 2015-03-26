@@ -10,5 +10,6 @@
 
 	<typeAliases>
 		<typeAlias alias="COMPUTER" type="com.partdb.license.domain.Computer" />
-	</typeAliases>
+		<typeAlias alias="LICENSE" type="com.partdb.license.domain.License" />
+	</typeAliases>	
 </configuration>
